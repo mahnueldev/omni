@@ -6,7 +6,7 @@ const allowedMarginVerticalClasses = [
   ];
 
   const allowedMarginHorizontalClasses = [
-    'ml-0', 'ml-1', 'ml-2', 'ml-3', 'ml-4', 'ml-5', 'ml-6', 'ml-7', 'ml-8', 'ml-9', 'ml-10',
+    'ml-0', 'ml-1', 'ml-2', 'ml-3', 'ml-4', 'ml-5', 'ml-6', 'ml-7', 'ml-8', 'ml-9', 'ml-10', 
     'mr-0', 'mr-1', 'mr-2', 'mr-3', 'mr-4', 'mr-5', 'mr-6', 'mr-7', 'mr-8', 'mr-9', 'mr-10'
   ];
   
@@ -15,11 +15,10 @@ const Spacer = ({marginVertical, marginHorizontal}) => {
     const isValidHorizontalMargin = allowedMarginHorizontalClasses.includes(marginHorizontal);
 
     const spacerStyle = `
-    
-    ${isValidVerticalMargin ? marginVertical : ''}
-    ${isValidHorizontalMargin ? marginVertical : ''}
-   
+    ${isValidVerticalMargin ? marginVertical + ' ' : ''}
+    ${isValidHorizontalMargin ? marginHorizontal + ' ' : ''}
   `;
+  
 
   return (
     <div className={spacerStyle}></div>

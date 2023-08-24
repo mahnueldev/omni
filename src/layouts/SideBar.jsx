@@ -9,6 +9,10 @@ import { useLocation } from 'react-router-dom';
 import logo from '../assets/svg/omni.svg'
 import invite from '../assets/svg/bookad.svg'
 
+const webScreen = 'lg:block';
+const tabScreen = 'md:hidden';
+const mobileScreen = 'hidden sm:hidden';
+
 const icons = {
   BiHomeAlt: <BiHomeAlt />,
   BsBook: <BsBook />,
@@ -25,7 +29,10 @@ const SideBar = () => {
     return location.pathname === link;
   };
   return (
-    <div className="bg-dark-200 h-screen fixed z-10">
+    
+       <main
+      className={`${webScreen} ${tabScreen} ${mobileScreen} bg-dark-200 h-screen fixed z-10 w-60`}
+    >
       <div className="flex items-center space-x-2 mt-6 mx-8 text-light-100 font-medium">
       <img src={logo} alt="Logo" className="w-6"/>
       <h2>Omni</h2>
@@ -56,10 +63,10 @@ const SideBar = () => {
       ))}
        <div className="flex-col  space-x-2 mt-12 mx-16 text-light-100 font-medium">
       <img src={invite} alt="Logo" className="w-24"/>
-      <Spacer marginVertical="mt-2"/>
+      <Spacer marginVertical="mt-2" />
       <Button text="Invite" href="https://www.creond.com/"/>
     </div>
-    </div>
+    </main>
     
   );
 };
