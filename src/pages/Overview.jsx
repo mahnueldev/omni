@@ -1,23 +1,19 @@
-// import { SideBar } from "../layouts"
-import Oops from '../assets/svg/oops.svg';
-import { Spacer } from '../components';
+import { OverviewSplitLeft, OverviewSplitRight } from '../layouts';
 
+const webScreen = 'lg:flex lg:flex-1 lg:gap-4';
+const tabScreen = 'lg:flex-row ';
+const mobileScreen = 'sm:flex sm:flex-col ';
 const Overview = () => {
   return (
-    <>
-    <Spacer marginVertical="mt-10"  />
-    <main className='flex justify-center items-center container h-full mt-64  bg-white-100 '>
-    <div className='flex-col justify-center  w-50'>
-    <img src={Oops} alt="Oops" className="w-40 opacity-25 ml-10"/>
-    <Spacer marginVertical="mt-2"  />
-    <p className='text-dark-400 '>Content not available for this page</p>
-</div>
-    </main>
-  
+    <section className={`${webScreen} ${tabScreen} ${mobileScreen} `}>
+      <div className=' lg:flex-1 '>
+        <OverviewSplitLeft />
+      </div>
+      <div className=''>
+        <OverviewSplitRight />
+      </div>
+    </section>
+  );
+};
 
-</>
-
-  )
-}
-
-export default Overview
+export default Overview;

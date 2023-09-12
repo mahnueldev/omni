@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const Input = (props) => {
-    const { label, type, placeholder, error } = props;
+    const { label, type, placeholder, error, onChange, value, required } = props;
   
     return (
       <div className='mb-4 '>
@@ -9,6 +9,9 @@ const Input = (props) => {
         <input
           type={type || "text" || "password"}
           placeholder={placeholder || ""}
+          onChange={onChange}
+          value={value}
+          required={required}
           className="w-full px-3 bg-transparent py-2 placeholder-dark-400 border border-dark-400 rounded-lg focus:outline-none focus:ring focus:border-blue-100 text-light-300"
         />
         <p className='text-red-400'>{error}</p>
@@ -17,9 +20,12 @@ const Input = (props) => {
   };
   
   Input.propTypes = {
-    label: PropTypes.node.isRequired,
+    label: PropTypes.string,
     type: PropTypes.string.isRequired,
     placeholder: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+    value: PropTypes.string,
+    required: PropTypes.bool,
     error: PropTypes.string.isRequired,
   
   };

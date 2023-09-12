@@ -2,7 +2,7 @@ import { Button, Input, Spacer } from '../components';
 
 const Register = () => {
   return (
-    <main className='flex flex-col justify-center items-center h-full'>
+    <main className='flex flex-col justify-center items-center h-screen'>
       <div className=' w-3/12'>
 
       <Input placeholder='First Name'  type="text"/>

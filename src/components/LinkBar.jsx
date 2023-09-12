@@ -9,7 +9,7 @@ const LinkBar = ({ icon, text, notification, active, link }) => {
     </div>
   ) : null;
 
-  const linkClasses = `text-sm ${active ? 'text-light-100' : 'text-dark-400'}`;
+  const linkClasses = `text-base ${active ? 'text-light-100' : 'text-dark-400'}`;
   const iconClasses = `text-xl ${active ? 'text-light-100' : 'text-dark-400'}`;
   const containerClasses = `text-dark-100 flex justify-items-center items-center px-4 py-3.5 rounded-xl max-w-xs space-x-2  w-52 ${active ? 'bg-blue-200' : ''}`;
 
