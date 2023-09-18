@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 
 const Input = (props) => {
     const { label, type, placeholder, error, onChange, value, required } = props;
+    
   
     return (
       <div className='mb-4 '>

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setCredentials } from '../features/auth/authSlice';
 import { useLoginMutation } from '../features/auth/authApiSlice';
+import {Link} from 'react-router-dom'
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -65,6 +66,8 @@ const Login = () => {
           />
           <Spacer marginVertical='mt-8' />
           <Button text='Login' />
+          <Spacer marginVertical='mt-8' />
+          <div className='text-dark-400'>Dont have an account? <Link to="/register"><span className='text-light-100'>Register</span></Link> </div>
           {errorMessage && <div className='text-red-500'>{errorMessage}</div>}
         </form>
       </div>

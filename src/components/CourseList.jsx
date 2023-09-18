@@ -11,7 +11,7 @@ const CourseList = ({ img, imgName, title, date }) => {
         <h2 className='text-light-300 text-base'>{title}</h2>
         <p className='text-light-500 text-sm'>{date}</p>
       </div>
-      <div className='ml-12'>
+      <div className='ml-12 text-dark-400'>
         <FiMoreVertical />
       </div>
     </section>

@@ -4,7 +4,7 @@ import { CourseListing } from '../data/courselist';
 
 const MyPlan = () => {
   return (
-    <div className="bg-dark-200 p-1 ">
+    <div className="bg-dark-200 p-1 rounded-lg">
         <h2 className="p-4 text-light-100">My Planning</h2>
          {CourseListing.map((item) => (
         <CourseList 

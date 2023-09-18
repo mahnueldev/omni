@@ -4,7 +4,7 @@ import { CompletedLx} from '../data/courselist';
 
 const CompletedCx = () => {
   return (
-    <section className="bg-dark-200 p-4">
+    <section className="bg-dark-200 p-4 rounded-lg">
       <h2 className="text-base text-light-100">Completed Course</h2>
       <Spacer marginVertical='mb-8'/>
       {CompletedLx.map((item) => (
