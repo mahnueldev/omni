@@ -1,0 +1,10 @@
+{
+    "routes": [
+      {
+        "src": "/[^.]+",
+        "status": 308,
+        "destination": "/",
+        "headers": { "Location": "https://example.com/" }
+      }
+    ]
+}
