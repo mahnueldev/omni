@@ -3,7 +3,7 @@
       {
         "src": "/[^.]+",
         "status": 308,
-        "destination": "/",
+        "dest": "/",
         "headers": { "Location": "https://example.com/" }
       }
     ]
