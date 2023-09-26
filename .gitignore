@@ -24,6 +24,6 @@ dist-ssr
 *.sln
 *.sw?
 temp
-src/features
+# src/features
 store.jsx
 netlify.toml
