@@ -10,7 +10,7 @@ export default defineConfig({
   ],
   server: {
     proxy: {
-      '/api': 'https://test.mahnuel.com', // Replace with your API server URL
+      '/api': 'https://test.mahnuel.com/api', // Replace with your API server URL
     },
   },
 });
