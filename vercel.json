@@ -1,0 +1,10 @@
+{
+    "routes": [
+      {
+        "src": "/[^.]+",
+        "status": 308,
+        "dest": "/",
+        "headers": { "Location": "https://app-omni.vercel.app" }
+      }
+    ]
+}
